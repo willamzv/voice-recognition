@@ -8,6 +8,9 @@ import Dashboard from './components/Dashboard';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import NoMatch from './components/NoMatch';
+import Notes from './components/Notes'
+import Contacts from './components/Contacts'
+
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -25,6 +28,8 @@ export default (
       <Route path="signin" component={SignIn} />
       <Route component={AuthenticatedRoutes}>
         <Route path="dashboard" component={Dashboard} />
+        <Route path="notes" component={Notes} />
+        <Route path="contacts" component={Contacts} />
         <Route component={AdminRoutes}>
           <Route path="/admin" component={Admin} />
           {/* PROTECTED BY ADMIN ACCESS */}
@@ -34,4 +39,3 @@ export default (
     </Route>
   </Route>
 )
-

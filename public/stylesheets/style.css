@@ -10,3 +10,123 @@
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul,li{
+  list-style:none;
+}
+
+.note{
+  overflow:hidden;
+  padding:3em;
+}
+
+.note li{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:15em;
+  width:15em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+
+.note li{
+  margin:1em;
+  float:left;
+}
+.note li h2{
+  font-size:100%;
+  font-weight:bold;
+  margin:1em;
+}
+
+.note li p{
+  font-size:100%;
+}
+.note li{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+
+.note li:nth-child(even){
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+
+.note li:nth-child(3n){
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+
+
+.note li:nth-child(5n){
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+.note li:hover,
+.note li:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+h2,p{
+  font-size:100%;
+  font-weight:normal;
+  margin:0;
+  padding: 0;
+
+}h2,p{
+  font-size:100%;
+  font-weight:normal;
+  margin:0;
+  padding: 0;
+}
+
+.note{
+  overflow:hidden;
+  padding:3em;
+}
+
+.title-text,
+.note-text{
+  text-overflow: ellipsis;
+  overflow: scroll;
+}
+
+.note-text{
+    height: 8em;
+}
+
+.title-text{
+  height: 2em;
+}

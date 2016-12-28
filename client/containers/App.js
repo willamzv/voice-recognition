@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $('.button-collapse').sideNav();
+    window.jQuery('.button-collapse').sideNav();
   }
 
   logout(e) {
@@ -26,8 +26,8 @@ class App extends React.Component {
         return (
           <div>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
+            <li><Link to="/notes">Notes</Link></li>
+            <li><Link to="/contacts">Contacts</Link></li>
             <li><Link to="/history">History</Link></li>
             <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
           </div>
@@ -58,14 +58,14 @@ class App extends React.Component {
           <div className="nav-wrapper">
             <Link to="/" className="brand-logo">My Logo</Link>
             <a href="#" data-activates="mobile" className="button-collapse">
-              <i className="fa fa-bars"></i>
+              <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">
               {this.navs()}
             </ul>
             <ul className="side-nav" id="mobile">
               {this.navs()}
-            </ul>  
+            </ul>
           </div>
         </nav>
         <Flash />
@@ -80,4 +80,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(App);
-

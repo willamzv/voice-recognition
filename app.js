@@ -7,10 +7,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-mongoose.connect( 'mongodb://localhost/react-redux-router-auth' );
+mongoose.connect( 'mongodb://localhost/capstone' );
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
+var notes = require('./routes/notes');
+var contacts = require('./routes/contacts');
 
 var app = express();
 
@@ -51,6 +53,8 @@ passport.deserializeUser(User.deserializeUser());
 //PUT API ROUTES HERE vvv
 //
 app.use('/api/auth', auth);
+app.use('/api/notes', notes);
+app.use('/api/contacts', contacts);
 //
 //PUT API ROUTES HERE ^^^^
 

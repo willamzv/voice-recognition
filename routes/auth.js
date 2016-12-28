@@ -16,7 +16,7 @@ router.post('/signup', (req, res) => {
   User.register(new User({username: req.body.email}), req.body.password, (err, user) => {
     if (err)
       return res.status(500).json(err);
- 
+
     user.save( (err, user) => {
       if (err)
         return res.status(500).json(err);

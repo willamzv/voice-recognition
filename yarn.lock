@@ -877,7 +877,7 @@ babel-register@^6.18.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.20.0, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
+babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.20.0, babel-runtime@^6.3.19, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
   version "6.20.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.20.0.tgz#87300bdcf4cd770f09bf0048c64204e17806d16f"
   dependencies:
@@ -1280,6 +1280,10 @@ commoner@^0.10.1:
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+
+connect-flash@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/connect-flash/-/connect-flash-0.1.1.tgz#d8630f26d95a7f851f9956b1e8cc6732f3b6aa30"
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -1739,6 +1743,10 @@ expand-tilde@^1.2.1, expand-tilde@^1.2.2:
   dependencies:
     os-homedir "^1.0.1"
 
+express-back@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/express-back/-/express-back-0.0.2.tgz#784419963acba0e6fa1607bef283ae473c3ed954"
+
 express-session@^1.14.2:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.14.2.tgz#6bcf586ed6d1dc37b02570087756c9de7b80b275"
@@ -1908,6 +1916,10 @@ first-chunk-stream@^2.0.0:
 flagged-respawn@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
+
+flash@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/flash/-/flash-1.1.0.tgz#8ab2b29ed3b68a5cfb1a89bf98e7f69d7f1a020a"
 
 flatten@^1.0.2:
   version "1.0.2"
@@ -2688,6 +2700,10 @@ js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
 
+js-md5@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/js-md5/-/js-md5-0.4.1.tgz#11519a54167ea3ef9baffb6fbcd5e65bc7da94be"
+
 js-tokens@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-2.0.0.tgz#79903f5563ee778cc1162e6dcf1a0027c97f9cb5"
@@ -3066,6 +3082,10 @@ math-expression-evaluator@^1.2.14:
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.14.tgz#39511771ed9602405fba9affff17eb4d2a3843ab"
   dependencies:
     lodash.indexof "^4.0.5"
+
+md5-js@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/md5-js/-/md5-js-0.0.3.tgz#6e28de25233d55b3476f6a8c0345fca53019d4b7"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -3966,9 +3986,23 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
+react-addons-update@^0.14.6:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/react-addons-update/-/react-addons-update-0.14.8.tgz#486f1fb71e09ef8ad09c0e95fbe59d173782fe1a"
+
 react-dom@^0.14.7:
   version "0.14.8"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.8.tgz#0f1c547514263f771bd31814a739e5306575069e"
+
+react-icon-base@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.0.4.tgz#b6b7662e8b009b270a4f0c213c222f5d6eca3b22"
+
+react-icons@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.2.tgz#b200a87d516466157f5bd0bb4595d4b34694a532"
+  dependencies:
+    react-icon-base "2.0.4"
 
 react-redux@^5.0.0:
   version "5.0.0"
@@ -3994,7 +4028,16 @@ react-router@^3.0.0:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react@^0.14.7:
+react-speech@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/react-speech/-/react-speech-0.3.2.tgz#2791a4e52661a087e00b3bf14aa0cfca97ad155e"
+  dependencies:
+    babel-runtime "^6.3.19"
+    object-assign "^4.0.1"
+    react "^0.14.6"
+    react-addons-update "^0.14.6"
+
+react@^0.14.6, react@^0.14.7:
   version "0.14.8"
   resolved "https://registry.yarnpkg.com/react/-/react-0.14.8.tgz#078dfa454d4745bcc54a9726311c2bf272c23684"
   dependencies:

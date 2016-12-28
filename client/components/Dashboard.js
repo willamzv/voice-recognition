@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 const Dashboard = ({ user }) => (
   <div>
-    Welcome
   </div>
 );
 

@@ -108,6 +108,16 @@ export const addContact = (name,email) => {
   }
 }
 
+export const deleteContact = (_id) => {
+  return (dispatch) => {
+    $.ajax({
+      url: `/api/contacts/${_id}`,
+      type: 'DELETE'
+    }).done( () => {
+      dispatch(note('DELETE_CONTACT', {_id}));
+    });
+  }
+}
 
 const getContacts = (contacts) => {
   return { type: 'GET_CONTACTS', contacts }
@@ -121,4 +131,24 @@ const contact = (type, item) => {
     name,
     email
   }
+}
+
+
+//Clock
+
+export const setClock = (time) => {
+  return (dispatch) => {
+    dispatch(clock('SET_TIME', time))
+  }
+}
+
+const clock = (type,item) => {
+  let { t, t1, amPm } = item;
+  return{
+    type,
+    t,
+    t1,
+    amPm
+  }
+
 }

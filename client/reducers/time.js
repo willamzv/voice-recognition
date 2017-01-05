@@ -1,8 +1,8 @@
 const user = (state = {}, action) => {
   switch(action.type) {
-    case 'USER':
-      let { _id, role, fullname } = action
-      return { _id, role, fullname }
+    case 'SET_TIME':
+    let { t, t1, amPm } = action
+    return { t, t1, amPm }
     default:
       return state;
   }

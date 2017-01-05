@@ -10,12 +10,12 @@ class SignUp extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let { email, password } = this.refs;
+    let { email, password, fullname } = this.refs;
 
     $.ajax({
       url: '/api/auth/signup',
       type: 'POST',
-      data: { email: email.value, password: password.value },
+      data: { email: email.value, password: password.value, fullname: fullname.value },
       dataType: 'JSON'
     }).done( user => {
       this.props.dispatch(refreshLogin(user));
@@ -30,6 +30,7 @@ class SignUp extends React.Component {
       <div>
         <h2 className="center">Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
+          <input type="text" placeholder="name" ref="fullname" required={true} />
           <input type="email" placeholder="email" ref="email" required={true} />
           <input type="password" placeholder="password" ref="password" required={true} />
           <button className="btn">Sign Up</button>
@@ -37,6 +38,6 @@ class SignUp extends React.Component {
       </div>
     )
   }
-} 
+}
 
 export default connect()(SignUp);

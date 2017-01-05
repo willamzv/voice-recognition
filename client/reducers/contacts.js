@@ -9,7 +9,7 @@ const contacts = (state = [], action) => {
         ...state
       ]
     case 'DELETE_CONTACT':
-      return state.filter( contact => contact._id !== action._id )
+        return state.filter( contact => contact._id !== action._id )
    default:
      return state;
   }

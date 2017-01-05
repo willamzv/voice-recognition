@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setFilter } from '/Users/Willam/Documents/capstone/client/actions/actions.js';
+import { setFilter } from '../../actions/actions.js';
 
 const Filter = ({ dispatch, active, children, filter }) => {
   if (active)

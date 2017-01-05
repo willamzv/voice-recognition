@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from './Note';
 import { connect } from 'react-redux';
-import { deleteNote,toggleNote, getVisible } from '/Users/Willam/Documents/capstone/client/actions/actions.js';
+import { deleteNote,toggleNote, getVisible } from '../../actions/actions.js';
 
 
 const NoteList = ({ notes, dispatch }) => (
@@ -22,6 +22,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(
-  mapStateToProps
-)(NoteList);
+export default connect(mapStateToProps)(NoteList);

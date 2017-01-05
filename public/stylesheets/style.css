@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
 }
 
 ul,li{
@@ -29,7 +30,7 @@ ul,li{
 .note li{
   text-decoration:none;
   color:#000;
-  background:#ffc;
+  background:#ba68c8;
   display:block;
   height:15em;
   width:15em;
@@ -67,7 +68,7 @@ ul,li{
   -moz-transform:rotate(4deg);
   position:relative;
   top:5px;
-  background:#cfc;
+  background:#ffcc80;
 }
 
 .note li:nth-child(3n){
@@ -76,7 +77,7 @@ ul,li{
   -moz-transform:rotate(-3deg);
   position:relative;
   top:-5px;
-  background:#ccf;
+  background:#e6ee9c;
 }
 
 

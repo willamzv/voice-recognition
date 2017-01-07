@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { logout } from '../actions/auth';
 import Flash from '../components/Flash';
+import { refreshLogin } from '../actions/auth';
+import SingIn from '../components/SignIn';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class App extends React.Component {
 
   componentDidMount() {
     window.jQuery('.button-collapse').sideNav();
+    this.props.dispatch(refreshLogin());
   }
 
   logout(e) {
@@ -28,7 +31,7 @@ class App extends React.Component {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/notes">Notes</Link></li>
             <li><Link to="/contacts">Contacts</Link></li>
-            <li><Link to="/history">History</Link></li>
+            <li><Link to="/ytvoice">YTube Voice</Link></li>
             <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
           </div>
         )
@@ -56,7 +59,7 @@ class App extends React.Component {
       <div>
         <nav className="purple">
           <div className="nav-wrapper">
-            <Link to="/" className="brand-logo">My Logo</Link>
+            <Link to="/" className="brand-logo">Nova</Link>
             <a href="#" data-activates="mobile" className="button-collapse">
               <i className="material-icons">menu</i>
             </a>
@@ -69,6 +72,7 @@ class App extends React.Component {
           </div>
         </nav>
         <Flash />
+        <SingIn />
         { this.props.children }
       </div>
     )

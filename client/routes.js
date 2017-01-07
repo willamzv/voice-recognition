@@ -10,6 +10,7 @@ import SignIn from './components/SignIn';
 import NoMatch from './components/NoMatch';
 import Notes from './components/Notes'
 import Contacts from './components/Contacts'
+import Youtb from './components/Youtb'
 
 
 const AdminAccess = UserAuthWrapper({
@@ -30,6 +31,7 @@ export default (
         <Route path="dashboard" component={Dashboard} />
         <Route path="notes" component={Notes} />
         <Route path="contacts" component={Contacts} />
+        <Route path="ytvoice" component={Youtb} />
         <Route component={AdminRoutes}>
           <Route path="/admin" component={Admin} />
           {/* PROTECTED BY ADMIN ACCESS */}

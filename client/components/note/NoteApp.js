@@ -16,7 +16,7 @@ class NoteApp extends React.Component {
       speed:1, // talk normally
       soundex:true,
       executionKeyword: 'now',
-      obeyKeyword: "Alexa",
+      obeyKeyword: "Nova",
     });
   }
   componentWillUnmount(){
@@ -26,7 +26,7 @@ class NoteApp extends React.Component {
 
 
   render() {
-    artyom.dontObey()
+    artyom.dontObey();
     return (
       <div className="center row">
         <AddNote />

@@ -4,7 +4,7 @@ import { setClock } from '../actions/actions.js'
 
 
 class Clock extends React.Component{
-  componentDidMount(){
+  componentDidMount() {
     artyom.initialize({
       lang:"en-US",// A lot of languages are supported. Read the docs !
       continuous:true,// Artyom will listen forever
@@ -13,9 +13,8 @@ class Clock extends React.Component{
       speed:1, // talk normally
       soundex:true,
       executionKeyword: 'now',
-      obeyKeyword: "Alexa",
+      obeyKeyword: "Nova",
     });
-
   }
   constructor(props){
     super(props)

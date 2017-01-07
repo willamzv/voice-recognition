@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import Dictation from './Dictation'
 import Clock from './Clock'
 import Weather from './Weather'
+import Youtb from './Youtb'
 
 const Dashboard = ({ user }) => (
   <div>
     <Clock />
-
+    <Weather />
   </div>
 );
 

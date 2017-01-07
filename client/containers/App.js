@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 import { logout } from '../actions/auth';
 import Flash from '../components/Flash';
 import { refreshLogin } from '../actions/auth';
-import SingIn from '../components/SignIn';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class App extends React.Component {
       case 'user':
         return (
           <div>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
             <li><Link to="/notes">Notes</Link></li>
             <li><Link to="/contacts">Contacts</Link></li>
             <li><Link to="/ytvoice">YTube Voice</Link></li>
@@ -72,7 +71,6 @@ class App extends React.Component {
           </div>
         </nav>
         <Flash />
-        <SingIn />
         { this.props.children }
       </div>
     )

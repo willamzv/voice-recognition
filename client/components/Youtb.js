@@ -58,10 +58,12 @@ class Youtb extends React.Component{
       }
     };
     return(
+      <div className='tube'>
       <YouTube
         videoId={this.state.vid}
         opts={opts}
       />
+    </div>
     )
   }
 }

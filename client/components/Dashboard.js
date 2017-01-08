@@ -7,6 +7,7 @@ import Youtb from './Youtb'
 import FaYoutube from 'react-icons/lib/fa/youtube'
 import FaGroup from 'react-icons/lib/fa/group'
 import FaEdit from 'react-icons/lib/fa/edit'
+import { Link } from 'react-router';
 
 const Dashboard = ({ user }) => (
   <div>
@@ -14,13 +15,13 @@ const Dashboard = ({ user }) => (
     <Weather />
     <div className="icons">
       <span>
-        <FaYoutube className="right blue-text" style={{fontSize: '70px'}}/>
+        <Link to="/ytvoice"><FaYoutube className="right blue-text" style={{fontSize: '70px'}}/></Link>
       </span>
         <span>
-          <FaGroup className="right blue-text" style={{fontSize: '70px'}}/>
-        </span>
+          <Link to="/contacts"><FaGroup className="right blue-text" style={{fontSize: '70px'}}/></Link>
+          </span>
           <span>
-            <FaEdit className="right blue-text" style={{fontSize: '70px'}}/>
+            <Link to="/notes"><FaEdit className="right blue-text" style={{fontSize: '70px'}}/></Link>
           </span>
     </div>
   </div>

@@ -187,3 +187,10 @@ div .card:hover {
   justify-content: space-around;
   align-items: center;
 }
+
+.tube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

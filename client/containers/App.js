@@ -10,6 +10,7 @@ class App extends React.Component {
     super(props);
     this.navs = this.navs.bind(this);
     this.logout = this.logout.bind(this);
+    this.sayTime = this.sayTime.bind(this);
   }
 
   componentDidMount() {
@@ -31,6 +32,7 @@ class App extends React.Component {
             <li><Link to="/notes">Notes</Link></li>
             <li><Link to="/contacts">Contacts</Link></li>
             <li><Link to="/ytvoice">YTube Voice</Link></li>
+            <li><Link to='/dictation'>Dictation</Link></li>
             <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
           </div>
         )
@@ -53,7 +55,36 @@ class App extends React.Component {
     }
   }
 
+  sayTime(){
+    artyom.say("It is" + this.props.time.t1 + this.props.time.amPm)
+  }
+
   render() {
+    console.log(this.props.router.routes[0].childRoutes)
+    let commands = {
+      indexes:["go to notes","go to contacts","go to dashboard","go to youtube","logout","what time is it","time"],
+      action:(i) =>{
+        switch (i) {
+          case 0:
+            return this.props.router.push("/notes");
+          case 1:
+            return this.props.router.push("/contacts")
+          case 2:
+            return this.props.router.push("/dashboard")
+          case 3:
+            return this.props.router.push("/ytvoice")
+          case 4:
+            return this.props.dispatch(logout(this.props.router));
+          case 5:
+            return this.sayTime();
+          case 6:
+            return this.sayTime()
+          default:
+            return artyom.say("I cannot find the route")
+          }
+        }
+    };
+    artyom.addCommands(commands)
     return (
       <div>
         <nav className="purple">
@@ -78,7 +109,10 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { user: state.user }
+  return {
+    user: state.user,
+    time: state.time
+  }
 }
 
 export default connect(mapStateToProps)(App);

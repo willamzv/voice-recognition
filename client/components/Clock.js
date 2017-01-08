@@ -4,17 +4,20 @@ import { setClock } from '../actions/actions.js'
 
 
 class Clock extends React.Component{
-  componentDidMount() {
-    artyom.initialize({
-      lang:"en-US",// A lot of languages are supported. Read the docs !
-      continuous:true,// Artyom will listen forever
-      listen:true, // Start recognizing
-      debug:true, // Show everything in the console
-      speed:1, // talk normally
-      soundex:true,
-      executionKeyword: 'now',
-      obeyKeyword: "Nova",
-    });
+  componentDidMount(){
+    artyom.fatality();
+    setTimeout(()=>{
+      artyom.initialize({
+        lang:"en-US",// A lot of languages are supported. Read the docs !
+        continuous:true,// Artyom will listen forever
+        listen:true, // Start recognizing
+        debug:true, // Show everything in the console
+        speed:1, // talk normally
+        soundex:true,
+        executionKeyword: 'now',
+        obeyKeyword: "Nova",
+      });
+    },1000);
   }
   constructor(props){
     super(props)
@@ -33,7 +36,6 @@ class Clock extends React.Component{
         s = addZero(d.getSeconds());
         t = `${h}:${m}:${s}`;
         t1 = `${h}:${m}`
-
         amPm = d.getHours() >= 12 ? "pm" : "am";
         let timer = { t, t1, amPm }
         this.props.dispatch(setClock(timer))
@@ -44,20 +46,6 @@ class Clock extends React.Component{
   render () {
     this.getTime()
     let { t, t1, amPm } = this.props.time
-    let commands = {
-        indexes:["what time is it","time","tell me the time","go to notes"], // These spoken words will trigger the execution of the command
-        action:(i) =>{
-          switch(i){
-            case 3:
-              return artyom.say("hello")
-            default:
-              return artyom.say("It is" + this.props.time.t1 + this.props.time.amPm)
-          }
-
-        }
-    };
-    artyom.addCommands(commands)
-
     return (
       <div className="outer">
         <div className="inner">

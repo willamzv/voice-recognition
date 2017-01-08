@@ -8,6 +8,10 @@ class Weather extends React.Component {
       location: '', wx: '', humidity: '', temp: ''
     }
   };
+  
+  componentDidMount(){
+    this.getWeather("Salt Lake City")
+  }
 
   getWeather(city){
     let url = `http://api.openweathermap.org/data/2.5/weather?&appid=8ef93e169d7faacbc87963441582f7b4&q=${city}`
@@ -15,10 +19,7 @@ class Weather extends React.Component {
     .then((response) => {
       return response.json();
     }).then((json) => {
-      console.log(json);
-      console.log(json.weather[0].icon)
       this.setState({location: json.name, wx: json.weather[0].description, humidity: json.main.humidity, temp: json.main.temp})
-      artyom.say("In" + this.state.location + "is" + Math.round(this.state.temp * 9/5 -459.67) + "Fahrenheit with" + this.state.wx )
     })
   }
 
@@ -30,6 +31,7 @@ class Weather extends React.Component {
         indexes:["what is the weather in *"], // These spoken words will trigger the execution of the command
         action:(i,wildcard) =>{ // Action to be executed when a index match with spoken word
             this.getWeather(wildcard)
+            artyom.say("In" + this.state.location + "is" + Math.round(this.state.temp * 9/5 -459.67) + "Fahrenheit" )
 
         }
     };

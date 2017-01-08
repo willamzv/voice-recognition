@@ -19,6 +19,7 @@
   "dependencies": {
     "Materialize": "materialize#^0.97.5",
     "moment": "^2.11.2",
-    "artyom.js": "^1.0.1"
+    "artyom.js": "^1.0.1",
+    "animate.css": "^3.5.2"
   }
 }

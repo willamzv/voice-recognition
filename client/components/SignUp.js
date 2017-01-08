@@ -27,14 +27,30 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2 className="center">Sign Up</h2>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="name" ref="fullname" required={true} />
-          <input type="email" placeholder="email" ref="email" required={true} />
-          <input type="password" placeholder="password" ref="password" required={true} />
-          <button className="btn">Sign Up</button>
-        </form>
+      <div className="animated bounceInDown row">
+        <div className="f-container">
+          <section id="f-content">
+            <form onSubmit={this.handleSubmit}>
+              <h1>Sign Up</h1>
+              <div className="input-field row">
+                <i className="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" className="validate" type="text" ref="fullname" required={true} />
+                <label className="left-align" htmlFor="icon_prefix">User's Name</label>
+              </div>
+              <div className="input-field row">
+                <i className="material-icons prefix">email</i>
+                <input id="icon_prefix" className="validate" type="email" required={true} ref="email"/>
+                <label className="left-align" htmlFor="icon_prefix">Email</label>
+              </div>
+              <div className="input-field row">
+                <i className="material-icons prefix">lock_outline</i>
+                <input id="icon_prefix" type="password" required={true} ref="password" />
+                <label className="left-align" htmlFor="icon_prefix">Password</label>
+              </div>
+              <button className="col s12 m12 left btn red waves-effect waves-light">Sign Up</button>
+            </form>
+          </section>
+        </div>
       </div>
     )
   }

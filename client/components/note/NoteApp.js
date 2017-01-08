@@ -8,25 +8,22 @@ import { fetchNotes } from '../../actions/actions.js';
 class NoteApp extends React.Component {
   componentDidMount(){
     this.props.dispatch(fetchNotes());
-    artyom.initialize({
-      lang:"en-US",// A lot of languages are supported. Read the docs !
-      continuous:true,// Artyom will listen forever
-      listen:true, // Start recognizing
-      debug:true, // Show everything in the console
-      speed:1, // talk normally
-      soundex:true,
-      executionKeyword: 'now',
-      obeyKeyword: "Nova",
-    });
-  }
-  componentWillUnmount(){
     artyom.fatality();
+    setTimeout(()=>{
+      artyom.initialize({
+        lang:"en-US",// A lot of languages are supported. Read the docs !
+        continuous:true,// Artyom will listen forever
+        listen:true, // Start recognizing
+        debug:true, // Show everything in the console
+        speed:1, // talk normally
+        soundex:true,
+        executionKeyword: 'now',
+        obeyKeyword: "Nova",
+      });
+    },1000);
   }
-
-
 
   render() {
-    artyom.dontObey();
     return (
       <div className="center row">
         <AddNote />

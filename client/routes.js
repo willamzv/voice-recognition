@@ -11,6 +11,8 @@ import NoMatch from './components/NoMatch';
 import Notes from './components/Notes'
 import Contacts from './components/Contacts'
 import Youtb from './components/Youtb'
+import Dictation from './components/Dictation'
+import Home from './components/Home'
 
 
 const AdminAccess = UserAuthWrapper({
@@ -24,7 +26,8 @@ const AdminRoutes = AdminAccess( (props) => props.children )
 
 export default (
   <Route>
-    <Route path="/" component={App}>
+    <Route component={App}>
+      <Route path="/" component={Home} />
       <Route path="signup" component={SignUp} />
       <Route path="signin" component={SignIn} />
       <Route component={AuthenticatedRoutes}>
@@ -32,6 +35,7 @@ export default (
         <Route path="notes" component={Notes} />
         <Route path="contacts" component={Contacts} />
         <Route path="ytvoice" component={Youtb} />
+        <Route path='dictation' component={Dictation} />
         <Route component={AdminRoutes}>
           <Route path="/admin" component={Admin} />
           {/* PROTECTED BY ADMIN ACCESS */}

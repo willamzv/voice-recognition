@@ -133,8 +133,6 @@ h2,p{
   height: 2em;
 }
 
-<<<<<<< HEAD
-
 /*forms*/
 .f-container { margin: 100px auto; position: relative; width: 900px; }
 #f-content {
@@ -229,9 +227,9 @@ h2,p{
 }
 #f-content form { margin: 5px 30px; position: relative }
 .signup { margin-top: 50px }
-=======
+
 .card-content {
-  background-color: white;
+  background-color: white !important;
 }
 
 div .card {
@@ -285,4 +283,3 @@ div .card:hover {
   justify-content: space-around;
   align-items: center;
 }
->>>>>>> 8752bec05c829f68f834e373c95bcc166e6c99bc

@@ -16,7 +16,7 @@ class ContactApp extends React.Component {
       speed:1, // talk normally
       soundex:true,
       executionKeyword: 'now',
-      obeyKeyword: "Alexa",
+      obeyKeyword: "Nova",
     });
   }
 

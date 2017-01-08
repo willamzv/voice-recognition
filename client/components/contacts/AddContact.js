@@ -51,10 +51,10 @@ const AddContact = ({ dispatch }) => {
   return (
     <div>
       <div className="col m10 offset-m1">
-        <input ref={ n => { name = n }} />
-        <input ref={ e => { email = e}} />
+        <input ref={ n => { name = n }} placeholder="Name" />
+        <input ref={ e => { email = e}} placeholder="Email" />
         <button
-          className="btn"
+          className="btn-floating btn-large purple"
           onClick={ () => {
             dispatch(addContact(name.value,email.value));
             artyom.say(name.value);
@@ -62,7 +62,7 @@ const AddContact = ({ dispatch }) => {
             email.value = null
         }}
         >
-          Add Contact
+          +
         </button>
       </div>
     </div>

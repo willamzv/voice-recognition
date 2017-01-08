@@ -13,6 +13,19 @@ class Weather extends React.Component {
     this.getWeather("Salt Lake City")
   }
 
+  componentDidMount() {
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=salt+lake+city&appid=8ef93e169d7faacbc87963441582f7b4`
+    fetch(url)
+    .then((response) => {
+      return response.json();
+    }).then((json) => {
+      console.log(json);
+      console.log(json.weather[0].icon)
+      this.setState({location: json.name, wx: json.weather[0].description, humidity: json.main.humidity, temp: json.main.temp})
+    })
+  }
+
+
   getWeather(city){
     let url = `http://api.openweathermap.org/data/2.5/weather?&appid=8ef93e169d7faacbc87963441582f7b4&q=${city}`
     fetch(url)
@@ -40,11 +53,11 @@ class Weather extends React.Component {
 
 
     return (
-      <div>
-        <h2>{this.state.location} Weather!</h2>
-        <h5>{this.state.wx}</h5>
-        <h5>{this.state.humidity} %</h5>
-        <h5>{fa} Fahrenheit</h5>
+      <div className="back-temp"> 
+        <div className="location">{this.state.location}&nbsp;Weather!</div>
+        <div className="weather">{this.state.wx}</div>
+        <div className="humidity">{this.state.humidity} %</div>
+        <div className="temp">{fa}&deg;&nbsp;Fahrenheit</div>
       </div>
     )
   }

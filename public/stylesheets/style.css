@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Dosis%7CRoboto');
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One|Covered+By+Your+Grace');
+=======
+@import url('https://fonts.googleapis.com/css?family=Dosis|Roboto');
+>>>>>>> bc3d91766776aeb70d63d83eb1676999268cc68b
 
 .alert-error {
   color: #a94442;
@@ -19,9 +23,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-image: url("../images/backnova.jpg");
-  background-size:cover;
-  font-family: 'Dosis';
-
+  background-size: cover;
+  font-family: 'Dosis', sans-serif;
 }
 
 ul,li{
@@ -29,14 +32,22 @@ ul,li{
 }
 
 .note-pad{
-  background-color: #b3e5fc;
+  background-color: none;
+  font-weight: bold;
+  color: white;
   height: 663px;
-  padding: 50px 20px !important;
+  padding: 20px 20px !important;
+}
+
+.bgstick{
+  height: 700px !important;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .note{
+  z-index: 1;
   overflow:hidden;
-  padding:1em;
+  padding:3em;
 }
 
 .note li{
@@ -123,11 +134,6 @@ h2,p{
   font-weight:normal;
   margin:0;
   padding: 0;
-}
-
-.note{
-  overflow:hidden;
-  padding:3em;
 }
 
 .title-text,
@@ -248,43 +254,38 @@ h2,p{
 div .card {
   /*display: flex;
   justify-content: space-between;*/
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(255,255,255);
   transition: 0.3s;
 
 }
 
 div .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(255,255,255);
 }
 
 .outer {
   font-family: 'Orbitron', sans-serif;
  font-weight: 700;
- background: black;
- color: paleturquoise;
+ color: white;
  display: flex;
  justify-content: flex-end;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /*weather*/
 .location {
   display: flex;
   justify-content: center;
-  font-size: 4em;
-  color: paleturquoise;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
-  background-color: white;
+  font-size: 2em;
+  color: white;
 }
 
 .weather, .humidity, .temp {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
-  color: paleturquoise;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+  font-size: 2em;
+  color: white;
 }
 
 .icons {
@@ -345,4 +346,34 @@ div .card:hover {
 }
 .hole-bottom {
   bottom: 10%;
+
+.tube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashwelcome {
+  color: white;
+  font-size: 2em;
+}
+
+.back-temp {
+  padding: 10vh 0;
+}
+
+.temp {
+  font-size: 75px;
+  font-weight: 300;
+}
+
+/* Navigation */
+
+.nav-wrapper ul a {
+  transition: all ease .3s;
+}
+
+.nav-wrapper ul a:hover {
+  background-color: white;
+  color: black;
 }

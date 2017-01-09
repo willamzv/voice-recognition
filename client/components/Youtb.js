@@ -10,14 +10,34 @@ class Youtb extends React.Component{
     this.state = { videosid: '', vid: ''}
   }
 
+  componentDidMount(){
+    artyom.fatality();
+    setTimeout(()=>{
+      artyom.initialize({
+        lang:"en-US",// A lot of languages are supported. Read the docs !
+        continuous:true,// Artyom will listen forever
+        listen:true, // Start recognizing
+        debug:true, // Show everything in the console
+        speed:1, // talk normally
+        soundex:true,
+        executionKeyword: 'now',
+        obeyKeyword: "Nova",
+      });
+    },1000);
+  }
+
   videoSearch(words){
     $.ajax({
       url: `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBDVstf4LwXgPuKoKWt_a6WfZMkV1gdN_8&part=snippet&type=video&maxResults=10&q=${words}`,
       type: 'GET',
       dataType: 'JSON'
     }).done( videos => {
+      console.log(videos)
       this.setState({videosid: videos})
+      console.log(this.state.videosid.items[0].id.videoId)
       this.setState({vid:this.state.videosid.items[0].id.videoId})
+      console.log(this.state.vid)
+      console.log(words)
     })
 
   }
@@ -41,10 +61,12 @@ class Youtb extends React.Component{
       }
     };
     return(
-      <YouTube
-        videoId={this.state.vid}
-        opts={opts}
+      <div className='tube'>
+        <YouTube
+          videoId={this.state.vid}
+          opts={opts}
       />
+    </div>
     )
   }
 }

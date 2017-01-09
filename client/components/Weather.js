@@ -54,7 +54,7 @@ class Weather extends React.Component {
         <div className="location">{this.state.location}&nbsp;Weather!</div>
         <div className="weather">{this.state.wx}</div>
         <div className="humidity">{this.state.humidity} %</div>
-        <div className="temp">{fa}&deg;&nbsp;Fahrenheit</div>
+        <div className="temp">{fa}&deg; F</div>
       </div>
     )
   }

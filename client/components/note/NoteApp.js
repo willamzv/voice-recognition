@@ -38,7 +38,7 @@ class NoteApp extends React.Component {
           </div>
           <AddNote />
         </div>
-        <div className="col m9 animated bounceInDown">
+        <div className="bgstick col m9 animated bounceInDown">
           <NoteList />
         </div>
       </div>

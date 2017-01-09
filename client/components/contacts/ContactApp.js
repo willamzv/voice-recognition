@@ -26,7 +26,7 @@ class ContactApp extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col m9 animated bounceInDown">
+        <div className="bgstick col m9 animated bounceInDown">
           <ContactList />
         </div>
         <div className="col m3 note-pad animated bounceInUp">

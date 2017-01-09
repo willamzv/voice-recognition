@@ -26,8 +26,12 @@ class ContactApp extends React.Component {
   render() {
     return (
       <div className="center row">
-        <AddContact />
-        <ContactList />
+          <div className="col m3">
+            <AddContact />
+          </div>
+          <div className=" col m9">
+            <ContactList />
+          </div>
       </div>
     )
   }

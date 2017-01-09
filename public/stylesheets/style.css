@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Roboto');
+
 .alert-error {
   color: #a94442;
   background-color: #f2dede;
@@ -15,8 +17,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("../images/nova.jpg");
-
+  background-image: url("../images/back.jpg");
+  font-family: 'Dosis', sans-serif;
 }
 
 ul,li{
@@ -235,48 +237,38 @@ h2,p{
 div .card {
   /*display: flex;
   justify-content: space-between;*/
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(255,255,255);
   transition: 0.3s;
 
 }
 
 div .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(255,255,255);
 }
 
 .outer {
   font-family: 'Orbitron', sans-serif;
  font-weight: 700;
- background: black;
- color: paleturquoise;
+ color: white;
  display: flex;
  justify-content: flex-end;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .location {
   display: flex;
   justify-content: center;
-  font-size: 4em;
-  color: paleturquoise;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
-  background-color: white;
+  font-size: 2em;
+  color: white;
 }
 
 .weather, .humidity, .temp {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
-  color: paleturquoise;
-  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+  font-size: 2em;
+  color: white;
 }
-
-/*.back-temp{
-  background-image: url("../images/backnova.jpg");
-}
-*/
 
 .icons {
   display: flex;
@@ -288,5 +280,29 @@ div .card:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.dashwelcome {
+  color: white;
+  font-size: 2em;
+}
+
+.back-temp {
+  padding: 10vh 0;
+}
+
+.temp {
+  font-size: 75px;
+  font-weight: 300;
+}
+
+/* Navigation */
+
+.nav-wrapper ul a {
+  transition: all ease .3s;
+}
+
+.nav-wrapper ul a:hover {
+  background-color: white;
+  color: black;
 }

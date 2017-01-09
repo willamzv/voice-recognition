@@ -8,20 +8,25 @@ import FaYoutube from 'react-icons/lib/fa/youtube'
 import FaGroup from 'react-icons/lib/fa/group'
 import FaEdit from 'react-icons/lib/fa/edit'
 import { Link } from 'react-router';
+import TiMicrophoneOutline from 'react-icons/lib/ti/microphone-outline';
 
 const Dashboard = ({ user }) => (
   <div>
+    <div className="dashwelcome">Welcome,<span>{user.fullname}</span></div>
     <Clock />
     <Weather />
     <div className="icons">
       <span>
-        <Link to="/ytvoice"><FaYoutube className="right blue-text" style={{fontSize: '70px'}}/></Link>
+        <Link to="/ytvoice"><FaYoutube className="right white-text" style={{fontSize: '70px'}}/></Link>
       </span>
         <span>
-          <Link to="/contacts"><FaGroup className="right blue-text" style={{fontSize: '70px'}}/></Link>
+          <Link to="/contacts"><FaGroup className="right white-text" style={{fontSize: '70px'}}/></Link>
           </span>
           <span>
-            <Link to="/notes"><FaEdit className="right blue-text" style={{fontSize: '70px'}}/></Link>
+            <Link to="/notes"><FaEdit className="right white-text" style={{fontSize: '70px'}}/></Link>
+          </span>
+          <span>
+            <Link to="/dictation"><TiMicrophoneOutline className="right white-text" style={{fontSize: '70px'}}/></Link>
           </span>
     </div>
   </div>

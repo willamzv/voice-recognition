@@ -11,19 +11,16 @@ class Youtb extends React.Component{
   }
 
   componentDidMount(){
-    artyom.fatality();
-    setTimeout(()=>{
-      artyom.initialize({
-        lang:"en-US",// A lot of languages are supported. Read the docs !
-        continuous:true,// Artyom will listen forever
-        listen:true, // Start recognizing
-        debug:true, // Show everything in the console
-        speed:1, // talk normally
-        soundex:true,
-        executionKeyword: 'now',
-        obeyKeyword: "Nova",
-      });
-    },1000);
+    artyom.initialize({
+      lang:"en-US",// A lot of languages are supported. Read the docs !
+      continuous:true,// Artyom will listen forever
+      listen:true, // Start recognizing
+      debug:true, // Show everything in the console
+      speed:1, // talk normally
+      soundex:true,
+      executionKeyword: 'now',
+      obeyKeyword: "Alexa",
+    });
   }
 
   videoSearch(words){
@@ -32,8 +29,12 @@ class Youtb extends React.Component{
       type: 'GET',
       dataType: 'JSON'
     }).done( videos => {
+      console.log(videos)
       this.setState({videosid: videos})
+      console.log(this.state.videosid.items[0].id.videoId)
       this.setState({vid:this.state.videosid.items[0].id.videoId})
+      console.log(this.state.vid)
+      console.log(words)
     })
 
   }
@@ -58,9 +59,9 @@ class Youtb extends React.Component{
     };
     return(
       <div className='tube'>
-      <YouTube
-        videoId={this.state.vid}
-        opts={opts}
+        <YouTube
+          videoId={this.state.vid}
+          opts={opts}
       />
     </div>
     )

@@ -12,8 +12,72 @@ class Home extends React.Component{
     switch(this.props.user.role) {
       case 'user':
         return (
-          <div>
-            Hello
+          <div className="container">
+            <h4 className="white-text">ABOUT NOVA</h4>
+            <div className="section-text white-text">
+              <p>The sky is so tragically beautiful.
+                A graveyard of stars</p>
+            </div>
+            <footer className="white-text">Anonymous</footer>
+            <br />
+            <div className="info white-text">
+              <p>slkasjdlkajslkdjaskjdkasldkjaslkdjlakjsdlkjaslkdjalksjdka
+              akjsfjhasjkfhjkashfkjhasjkfhakjshfjkahsfkjasjhfjhdkjhfkdjhfkjsjk
+            skjdhsdjkhgjksdhkjgshdkjghsdkjhgkjsdhgkjsdhgkjhsdkjghskjhgkjhsdjg
+          dsjlksdjflkjsdlkfjlksdjfkljsdlkfjlksdjflksdjlkfjsdlkfjklsdjflkjsdfkjd</p>
+            </div>
+            <br />
+            <div className="info white-text">
+              <p>slkasjdlkajslkdjaskjdkasldkjaslkdjlakjsdlkjaslkdjalksjdka
+              akjsfjhasjkfhjkashfkjhasjkfhakjshfjkahsfkjasjhfjhdkjhfkdjhfkjsjk
+            skjdhsdjkhgjksdhkjgshdkjghsdkjhgkjsdhgkjsdhgkjhsdkjghskjhgkjhsdjg
+          dsjlksdjflkjsdlkfjlksdjfkljsdlkfjlksdjflksdjlkfjsdlkfjklsdjflkjsdfkjd</p>
+            </div>
+          <br />
+            <div className='row row-about'>
+
+              <div className="card col s9 m3">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src="images/space.png"/>
+                </div>
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+
+              <div className="card col s9 m3">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src="images/space.png"/>
+                </div>
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+
+              <div className="card col s9 m3">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src="images/space.png"/>
+                </div>
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+            </div>
           </div>
       )
     default:

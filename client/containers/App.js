@@ -87,7 +87,7 @@ class App extends React.Component {
     artyom.addCommands(commands)
     return (
       <div>
-        <nav className="purple">
+        <nav className="transparent">
           <div className="nav-wrapper">
             <Link to="/" className="brand-logo">Nova</Link>
             <a href="#" data-activates="mobile" className="button-collapse">

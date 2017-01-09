@@ -54,7 +54,7 @@ const AddContact = ({ dispatch }) => {
         <input ref={ n => { name = n }} placeholder="Name" />
         <input ref={ e => { email = e}} placeholder="Email" />
         <button
-          className="btn-floating btn-large purple"
+          className="btn-floating btn-large blue"
           onClick={ () => {
             dispatch(addContact(name.value,email.value));
             artyom.say(name.value);

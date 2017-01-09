@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis%7CRoboto');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One|Covered+By+Your+Grace');
+
 .alert-error {
   color: #a94442;
   background-color: #f2dede;
@@ -15,7 +18,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("../images/nova.jpg");
+  background-image: url("../images/backnova.jpg");
+  background-size:cover;
+  font-family: 'Dosis';
 
 }
 
@@ -23,9 +28,15 @@ ul,li{
   list-style:none;
 }
 
+.note-pad{
+  background-color: #b3e5fc;
+  height: 663px;
+  padding: 50px 20px !important;
+}
+
 .note{
   overflow:hidden;
-  padding:3em;
+  padding:1em;
 }
 
 .note li{
@@ -33,8 +44,8 @@ ul,li{
   color:#000;
   background:#ba68c8;
   display:block;
-  height:15em;
-  width:15em;
+  height:12em;
+  width:12em;
   padding:1em;
   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
   -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -228,6 +239,8 @@ h2,p{
 #f-content form { margin: 5px 30px; position: relative }
 .signup { margin-top: 50px }
 
+
+/*contacts*/
 .card-content {
   background-color: white !important;
 }
@@ -255,6 +268,7 @@ div .card:hover {
   font-size: 3em;
 }
 
+/*weather*/
 .location {
   display: flex;
   justify-content: center;
@@ -273,13 +287,62 @@ div .card:hover {
   text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
 }
 
-/*.back-temp{
-  background-image: url("../images/backnova.jpg");
-}
-*/
-
 .icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/*dictation*/
+
+.paper {
+  position: absolute;
+  height: 600px;
+  width: inherit ;
+  background: rgba(255,255,255,0.9);
+  margin:auto;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255,0,0,0.4);
+}
+.lines {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+.text {
+  position: absolute;
+  top: 65px;
+  left: 55px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 25px;
+  font-family: 'Bowlby One', cursive !important;
+  overflow: hidden;
+  outline: none;
+}
+.holes {
+  position: absolute;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background: lightgoldenrodyellow;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2px 0px #888;
+}
+.hole-top {
+  top: 10%;
+}
+.hole-middle {
+  top: 50%;
+}
+.hole-bottom {
+  bottom: 10%;
 }

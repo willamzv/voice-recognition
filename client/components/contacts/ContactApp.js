@@ -25,9 +25,27 @@ class ContactApp extends React.Component {
 
   render() {
     return (
-      <div className="center row">
-        <AddContact />
-        <ContactList />
+      <div className="row">
+        <div className="col m9 animated bounceInDown">
+          <ContactList />
+        </div>
+        <div className="col m3 note-pad animated bounceInUp">
+          <div>
+            <h1 className="center">Contacts</h1>
+            <p>Welcome to Contacts App. You can add new contacts with your voice by saying the command New Contact and the name of the person you want to add, Nova is going to ask you if you want to add an email: if yes, please enter the email on the prompt</p>
+            <br/>
+            <p>Sample:</p>
+              <ul>
+                <li>You: New Contact Steve</li>
+                <li>Nova: Do you want to add an emial?</li>
+                <li>You: Yes/No</li>
+              </ul>
+            <br/>
+            <hr/>
+            <p>You can add also new Contacts using the form bellow</p>
+          </div>
+          <AddContact />
+        </div>
       </div>
     )
   }

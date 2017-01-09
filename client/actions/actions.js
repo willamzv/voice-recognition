@@ -150,5 +150,20 @@ const clock = (type,item) => {
     t1,
     amPm
   }
+}
 
+//script
+
+export const setScript = (script) => {
+  return (dispatch) => {
+    dispatch(dictation('SET_SCRIPT', script))
+  }
+}
+
+const dictation = (type,item) => {
+  let script = item
+  return {
+    type,
+    script
+  }
 }

@@ -6,6 +6,7 @@ import notes from './notes';
 import filter from './filter'
 import contacts from './contacts'
 import time from './time'
+import script from './script'
 
 const rootReducer = combineReducers({
     routing: routerReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     notes,
     contacts,
     filter,
-    time
+    time,
+    script
 });
 
 export default rootReducer;

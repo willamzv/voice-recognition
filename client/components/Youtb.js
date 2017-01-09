@@ -10,22 +10,6 @@ class Youtb extends React.Component{
     this.state = { videosid: '', vid: ''}
   }
 
-  componentDidMount(){
-    artyom.fatality();
-    setTimeout(()=>{
-      artyom.initialize({
-        lang:"en-US",// A lot of languages are supported. Read the docs !
-        continuous:true,// Artyom will listen forever
-        listen:true, // Start recognizing
-        debug:true, // Show everything in the console
-        speed:1, // talk normally
-        soundex:true,
-        executionKeyword: 'now',
-        obeyKeyword: "Nova",
-      });
-    },1000);
-  }
-
   videoSearch(words){
     $.ajax({
       url: `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBDVstf4LwXgPuKoKWt_a6WfZMkV1gdN_8&part=snippet&type=video&maxResults=10&q=${words}`,

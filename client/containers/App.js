@@ -60,9 +60,8 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props.router.routes[0].childRoutes)
     let commands = {
-      indexes:["go to notes","go to contacts","go to dashboard","go to youtube","logout","what time is it","time"],
+      indexes:["go to notes","go to contacts","go to dashboard","go to youtube","logout","what time is it","time","go to Dictation"],
       action:(i) =>{
         switch (i) {
           case 0:
@@ -79,6 +78,8 @@ class App extends React.Component {
             return this.sayTime();
           case 6:
             return this.sayTime()
+          case 7:
+            return this.props.router.push('/dictation')
           default:
             return artyom.say("I cannot find the route")
           }
@@ -87,7 +88,7 @@ class App extends React.Component {
     artyom.addCommands(commands)
     return (
       <div>
-        <nav className="purple">
+        <nav className="transparent">
           <div className="nav-wrapper">
             <Link to="/" className="brand-logo">Nova</Link>
             <a href="#" data-activates="mobile" className="button-collapse">

@@ -4,8 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Note = new Schema({
-  title: Number,
-  text: String,
+  text: { type:String , required:true },
   completed: Boolean,
   userId: String
 })

@@ -15,7 +15,7 @@ const AddNote = ({ dispatch }) => {
   let note;
   return (
     <div className="col m10 offset-m1">
-      <input ref={ n => { note = n }} />
+      <input ref={ n => { note = n }} required={true} placeholder="Type your note here"/>
       <button
         className="btn-floating btn-large purple"
         onClick={ () => {

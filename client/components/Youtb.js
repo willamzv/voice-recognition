@@ -7,7 +7,7 @@ class Youtb extends React.Component{
   constructor(props){
     super(props);
     this.videoSearch = this.videoSearch.bind(this)
-    this.state = { videosid: '', vid: ''}
+    this.state = { videoId: '', title: '', description:''}
   }
 
   componentDidMount(){
@@ -23,21 +23,22 @@ class Youtb extends React.Component{
         executionKeyword: 'now',
         obeyKeyword: "Nova",
       });
-    },1000);
+    },2000);
   }
 
   videoSearch(words){
+
     $.ajax({
       url: `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBDVstf4LwXgPuKoKWt_a6WfZMkV1gdN_8&part=snippet&type=video&maxResults=10&q=${words}`,
       type: 'GET',
       dataType: 'JSON'
     }).done( videos => {
-      console.log(videos)
-      this.setState({videosid: videos})
-      console.log(this.state.videosid.items[0].id.videoId)
-      this.setState({vid:this.state.videosid.items[0].id.videoId})
-      console.log(this.state.vid)
-      console.log(words)
+      console.log(videos.items[1].snippet.thumbnails.medium)
+      this.setState({
+        videoId: videos.items[0].id.videoId,
+        title:videos.items[0].snippet.title,
+        description:videos.items[0].snippet.description
+      })
     })
 
   }
@@ -54,19 +55,35 @@ class Youtb extends React.Component{
     artyom.addCommands(commands)
 
     const opts = {
-      height: '390',
-      width: '640',
+      height: '500',
+      width: '800',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 1
       }
     };
     return(
-      <div className='tube'>
-        <YouTube
-          videoId={this.state.vid}
-          opts={opts}
-      />
-    </div>
+      <div className="row">
+        <div className="center col l8 m8 s12 animated bounceInDown">
+          <YouTube
+            videoId={this.state.videoId}
+            opts={opts}
+          />
+          <h3 className="white-text">{this.state.title}</h3>
+          <p className="white-text">{this.state.description}</p>
+        </div>
+        <div className="col l4 m4 s12 animated bounceInUp note-pad">
+          <h1 className="center">YTube Voice</h1>
+          <p>You can search your favorite videos on YouTube with voice commands</p>
+          <p>You just need to say Find or Play and then the name of your favorite Artist or the name of your favorite song</p>
+          <br/>
+          <hr/>
+          <h6>Samples:</h6>
+          <ul>
+            <li>Play Rihanna</li>
+            <li>Find One Metallica</li>
+          </ul>
+        </div>
+      </div>
     )
   }
 }

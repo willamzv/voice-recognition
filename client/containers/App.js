@@ -94,7 +94,7 @@ class App extends React.Component {
             <a href="#" data-activates="mobile" className="button-collapse">
               <i className="material-icons">menu</i>
             </a>
-            <ul className="right hide-on-med-and-down">
+            <ul className="navb right hide-on-med-and-down">
               {this.navs()}
             </ul>
             <ul className="side-nav" id="mobile">

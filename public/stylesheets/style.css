@@ -292,6 +292,7 @@ div .card:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 80px;
 }
 
 /*dictation*/
@@ -299,7 +300,7 @@ div .card:hover {
 .paper {
   position: absolute;
   height: 600px;
-  width: inherit ;
+  width: 600px;
   background: rgba(255,255,255,0.9);
   margin:auto;
   box-shadow: 0px 0px 5px 0px #888;
@@ -365,15 +366,4 @@ div .card:hover {
 .temp {
   font-size: 75px;
   font-weight: 300;
-}
-
-/* Navigation */
-
-.nav-wrapper ul a {
-  transition: all ease .3s;
-}
-
-.nav-wrapper ul a:hover {
-  background-color: white;
-  color: black;
 }

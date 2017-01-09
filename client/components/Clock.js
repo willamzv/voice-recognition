@@ -17,7 +17,7 @@ class Clock extends React.Component{
         executionKeyword: 'now',
         obeyKeyword: "Nova",
       });
-    },1000);
+    },2000);
   }
   constructor(props){
     super(props)

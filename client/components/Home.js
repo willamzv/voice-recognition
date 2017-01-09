@@ -21,17 +21,11 @@ class Home extends React.Component{
             <footer className="white-text">Anonymous</footer>
             <br />
             <div className="info white-text">
-              <p>slkasjdlkajslkdjaskjdkasldkjaslkdjlakjsdlkjaslkdjalksjdka
-              akjsfjhasjkfhjkashfkjhasjkfhakjshfjkahsfkjasjhfjhdkjhfkdjhfkjsjk
-            skjdhsdjkhgjksdhkjgshdkjghsdkjhgkjsdhgkjsdhgkjhsdkjghskjhgkjhsdjg
-          dsjlksdjflkjsdlkfjlksdjfkljsdlkfjlksdjflksdjlkfjsdlkfjklsdjflkjsdfkjd</p>
+              <p>Nova is your personal assistant, a web application with the ability to understand voice orders such as browsing the website, obeying voice commands such as adding notes and even searching for videos on youtube</p>
             </div>
             <br />
             <div className="info white-text">
-              <p>slkasjdlkajslkdjaskjdkasldkjaslkdjlakjsdlkjaslkdjalksjdka
-              akjsfjhasjkfhjkashfkjhasjkfhakjshfjkahsfkjasjhfjhdkjhfkdjhfkjsjk
-            skjdhsdjkhgjksdhkjgshdkjghsdkjhgkjsdhgkjsdhgkjhsdkjghskjhgkjhsdjg
-          dsjlksdjflkjsdlkfjlksdjfkljsdlkfjlksdjflksdjlkfjsdlkfjklsdjflkjsdfkjd</p>
+              <p></p>
             </div>
           <br />
             <div className='row row-about'>
@@ -83,13 +77,16 @@ class Home extends React.Component{
     default:
       return (
         <div>
-          <div>
+          <div className="animated fadeInLeftBig">
             <h1 className="white-text">Welcome to Nova</h1>
           </div>
           <div>
-            <h3 className="white-text">A React Web Application with Speech Recognition</h3>
+            <h3 className="animated fadeInRight white-text">Nova is your personal assistant</h3>
+            <h4 className="animated fadeInUp white-text" >A web application with the ability to understand voice commands</h4>
           </div>
-          <Link to="/signin"><button className="btn white-text" href="/signin">Sign In</button></Link>
+          <br/>
+          <Link to="/signin"><button className="animated zoomIn btn white-text">Sign In</button></Link>
+          <Link to="/signup"><button className="animated zoomIn btn red white-text">Sign Up</button></Link>
         </div>
       )
   }

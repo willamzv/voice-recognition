@@ -17,7 +17,7 @@ class Home extends React.Component{
         lang:"en-US",// A lot of languages are supported. Read the docs !
         continuous:true,// Artyom will listen forever
         listen:true, // Start recognizing
-        debug:true, // Show everything in the console
+        debug:false, // Show everything in the console
         speed:1, // talk normally
         soundex:true,
         executionKeyword: 'now',

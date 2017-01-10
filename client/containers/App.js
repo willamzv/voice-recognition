@@ -102,7 +102,7 @@ class App extends React.Component {
       <div>
         <nav className="black">
           <div className="nav-wrapper">
-            <Link to="/" className="brand-logo"><img src="images/Nova_logo.png" /></Link>
+            <Link to="/" className="brand-logo"><img className='logo'src="images/Nova_logo.png" /></Link>
             <span style={{'paddingLeft': '700px'}}>
               {this.microphoneOn()}
             </span>

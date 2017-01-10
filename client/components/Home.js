@@ -31,12 +31,12 @@ class Home extends React.Component{
       case 'user':
         return (
           <div className="container">
-            <h4 className="white-text">ABOUT Nova</h4>
-            <div className="section-text white-text">
+            <h3 className="white-text">ABOUT Nova</h3>
+            <div className="white-text">
               <p className="quote">"The sky is so tragically beautiful.
                 A graveyard of stars."</p>
             </div>
-            <footer className=" quote white-text">Anonymous</footer>
+            <footer className="quote white-text">Anonymous</footer>
             <br />
             <div className="info white-text">
               <p>Nova is your personal assistant, a web application with the ability to understand voice commands. We built Nova to help people

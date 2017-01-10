@@ -34,20 +34,20 @@ class Dictation extends React.Component{
     let text = this.props.script
     return (
     <div className="row">
-      <div className="col m3 s12 animated bounceInUp note-pad">
+      <div className="col m3 s12 l3 animated bounceInUp note-pad">
         <h1 className="center">Dictation</h1>
         <p>Dictation component is different that the other components, Nova is not listening now, that means you cannot navigate with your voice through the app or give her commands.</p>
         <p>When you click the Start button, Nova is going to write down on the notebook everything that you say. When you are done just click the stop button</p>
         <br/>
         <hr/>
         <p>Press Start and Nova will be ready to take notes</p>
-        <input type='button' className="btn col m6 s6" onClick={() => this.UserDictation.start()} value="Start"/>
-        <input type='button' className="btn red col m6 s6" onClick={() => this.UserDictation.stop()} value="Stop"/>
+        <input type='button' className="btn col l6 m6 s6" onClick={() => this.UserDictation.start()} value="Start"/>
+        <input type='button' className="btn red col l6 m6 s6" onClick={() => this.UserDictation.stop()} value="Stop"/>
         <br/>
         <p>Note: Please make sure you Stop Nova before you go to a different component</p>
       </div>
-      <div className="bgstick animated bounceInDown col m9 s12">
-        <div className="col offset-m3 m6 s12">
+      <div className="bgstick animated bounceInDown col l9 m9 s12">
+        <div className="col offset-m3 offset-l3 l6 m6 s12">
           <div className="paper">
             <div className="lines">
               <div className="text">

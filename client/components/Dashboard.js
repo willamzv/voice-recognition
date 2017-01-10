@@ -25,7 +25,7 @@ const Dashboard = ({ user }) => (
         <li>Go to Notes</li>
       </ul>
     </div>
-    <div className="col l9 m9 s12">
+    <div className="bgstick col l9 m9 s12">
       <div className="white-text animated flipInX">
         <Clock />
         <h1 className="dashwelcome center">Welcome <span>{user.fullname}</span></h1>

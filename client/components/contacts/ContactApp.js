@@ -26,10 +26,10 @@ class ContactApp extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="bgstick col m9 animated bounceInDown">
+        <div className="bgstick col m8 s12 l8 animated bounceInDown">
           <ContactList />
         </div>
-        <div className="col m3 note-pad animated bounceInUp">
+        <div className="col m4 s12 l4 note-pad animated bounceInUp">
           <div>
             <h1 className="center">Contacts</h1>
             <p>Welcome to Contacts App. You can add new contacts with your voice by saying the command New Contact and the name of the person you want to add, Nova is going to ask you if you want to add an email: if yes, please enter the email on the prompt</p>

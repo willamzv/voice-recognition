@@ -26,7 +26,7 @@ class NoteApp extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col m3 note-pad animated bounceInUp">
+        <div className="col m3 l3 s12 note-pad animated bounceInUp">
           <div>
             <h1 className="center">Notes</h1>
             <p>Welcome to Notes App. You can add notes with your voice just saying the command New Note or Create Note and the text of the note that you want to add</p>
@@ -38,7 +38,7 @@ class NoteApp extends React.Component {
           </div>
           <AddNote />
         </div>
-        <div className="bgstick col m9 animated bounceInDown">
+        <div className="bgstick col m9 l9 s12 animated bounceInDown">
           <NoteList />
         </div>
       </div>

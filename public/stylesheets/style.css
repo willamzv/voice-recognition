@@ -29,6 +29,7 @@ ul,li{
 .note-pad{
   background-color: none;
   font-weight: bold;
+  font-size: 18px;
   color: white;
   height: 663px;
   padding: 20px 20px !important;
@@ -270,7 +271,7 @@ div .card:hover {
 .location {
   display: flex;
   justify-content: center;
-  font-size: 2em;
+  font-size: 5em;
   color: white;
 }
 .weather, .humidity, .temp {
@@ -342,23 +343,6 @@ div .card:hover {
   bottom: 10%;
 }
 
-.dashwelcome {
-  color: white;
-  font-size: 2em;
-}
-.back-temp {
-  padding: 10vh 0;
-}
-.temp {
-  font-size: 75px;
-  font-weight: 300;
-}
-.quote {
-  font-size: 100px !important;
-}
-.info {
-  font-size: 30px;
-}
 /* Navigation */
 
 .nav-wrapper ul a {
@@ -379,24 +363,24 @@ div .card:hover {
 
 .dashwelcome {
   color: white;
-  font-size: 2em;
+  font-size: 50px;
 }
 
 .back-temp {
-  padding: 10vh 0;
+  padding: 10px 0;
 }
 
 .temp {
-  font-size: 75px;
+  font-size: 75px !important;
   font-weight: 300;
 }
 
 .quote {
-  font-size: 25px;
+  font-size: 27px;
 }
 
 .info {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 div.on-error {
@@ -413,4 +397,14 @@ div.on-error {
 
 #about-row .card {
   margin: 0 30px;
+}
+
+
+.brand-logo{
+  padding: 10px 0 !important;
+}
+
+img.logo{
+  height: 40px;
+  width: 200px;
 }

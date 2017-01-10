@@ -62,7 +62,7 @@ class Youtb extends React.Component{
     };
     return(
       <div className="row">
-        <div className="center col l8 m8 s12 animated bounceInDown">
+        <div className="center bgstick col l8 m8 s12 animated bounceInDown">
           <YouTube
             videoId={this.state.videoId}
             opts={opts}

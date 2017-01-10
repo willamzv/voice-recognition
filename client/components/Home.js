@@ -8,6 +8,23 @@ class Home extends React.Component{
     super(props);
     this.homepage = this.homepage.bind(this)
   }
+
+  componentDidMount(){
+    artyom.fatality();
+    setTimeout(()=>{
+      artyom.initialize({
+        lang:"en-US",// A lot of languages are supported. Read the docs !
+        continuous:true,// Artyom will listen forever
+        listen:true, // Start recognizing
+        debug:true, // Show everything in the console
+        speed:1, // talk normally
+        soundex:true,
+        executionKeyword: 'now',
+        obeyKeyword: "Nova",
+      });
+    },1000);
+  }
+
   homepage(){
     switch(this.props.user.role) {
       case 'user':
@@ -15,78 +32,37 @@ class Home extends React.Component{
           <div className="container">
             <h4 className="white-text">ABOUT NOVA</h4>
             <div className="section-text white-text">
-              <p>The sky is so tragically beautiful.
-                A graveyard of stars</p>
+              <p className="quote">The sky is so tragically beautiful.
+              A graveyard of stars</p>
             </div>
-            <footer className="white-text">Anonymous</footer>
+            <span className="white-text">Anonymous</span>
             <br />
             <div className="info white-text">
-              <p>Nova is your personal assistant, a web application with the ability to understand voice orders such as browsing the website, obeying voice commands such as adding notes and even searching for videos on youtube</p>
+              <h5>Nova is your personal assistant, a web application with the ability to understand voice commands</h5>
+              <h6>We built Nova to help people with everyday small tasks. Nova can take down quick reminders and save them for you to review later. It can add friend's and co- worker's emails. It can even help you write down your thought's in our dictation page. And when you feel like searching on Youtube for your favorite videos, Nova is also there to help!</h6>
             </div>
             <br />
             <div className="info white-text">
               <p></p>
             </div>
-          <br />
-            <div className='row row-about'>
-
-              <div className="card col s9 m3">
-                <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src="images/space.png"/>
-                </div>
-                <div className="card-content">
-                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div>
-
-              <div className="card col s9 m3">
-                <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src="images/space.png"/>
-                </div>
-                <div className="card-content">
-                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div>
-
-              <div className="card col s9 m3">
-                <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src="images/space.png"/>
-                </div>
-                <div className="card-content">
-                  <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div>
-            </div>
+            <br />
           </div>
-      )
+        )
     default:
       return (
-        <div>
-          <div className="animated fadeInLeftBig">
-            <h1 className="white-text">Welcome to Nova</h1>
+        <div className="row">
+          <div className="col s12 m12 l12">
+            <div className="animated fadeInLeftBig">
+              <h1 className="white-text">Welcome to Nova</h1>
+            </div>
+            <div>
+              <h3 className="animated fadeInRight white-text">Nova is your personal assistant</h3>
+              <h4 className="animated fadeInUp white-text" >A web application with the ability to understand voice commands</h4>
+            </div>
+            <br/>
+            <Link to="/signin"><button className="animated zoomIn btn white-text">Sign In</button></Link>
+            <Link to="/signup"><button className="animated zoomIn btn red white-text">Sign Up</button></Link>
           </div>
-          <div>
-            <h3 className="animated fadeInRight white-text">Nova is your personal assistant</h3>
-            <h4 className="animated fadeInUp white-text" >A web application with the ability to understand voice commands</h4>
-          </div>
-          <br/>
-          <Link to="/signin"><button className="animated zoomIn btn white-text">Sign In</button></Link>
-          <Link to="/signup"><button className="animated zoomIn btn red white-text">Sign Up</button></Link>
         </div>
       )
   }
@@ -94,7 +70,7 @@ class Home extends React.Component{
 
   render(){
     return(
-      <div>
+      <div id="hwelcome">
         {this.homepage()}
       </div>
     )

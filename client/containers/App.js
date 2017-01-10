@@ -101,9 +101,9 @@ class App extends React.Component {
     return (
       <div>
         <nav className="black">
-          <div className="nav-wrapper">
+          <div className="row nav-wrapper">
             <Link to="/" className="brand-logo"><img className='logo'src="images/Nova_logo.png" /></Link>
-            <span style={{'paddingLeft': '700px'}}>
+            <span style={{'paddingLeft': '20em'}}>
               {this.microphoneOn()}
             </span>
             <a href="#" data-activates="mobile" className="button-collapse">

@@ -20,13 +20,12 @@ class Dictation extends React.Component{
     continuous:true, // Enable continuous if HTTPS connection
     onResult:(text)=> {
         this.toText(text);
-        console.log(this.props.script);
     },
     onStart:() => {
-        console.log("Dictation started by the user");
+      Materialize.toast('Dictation started by the user', 4000, 'rounded');
     },
     onEnd:() => {
-        alert("Dictation stopped by the user");
+      Materialize.toast('Dictation stopped by the user', 4000, 'rounded');
     }
 });
 
@@ -47,16 +46,18 @@ class Dictation extends React.Component{
         <p>Note: Please make sure you Stop Nova before you go to a different component</p>
       </div>
       <div className="bgstick animated bounceInDown col l9 m9 s12">
-        <div className="col offset-m3 offset-l3 l6 m6 s12">
-          <div className="paper">
-            <div className="lines">
-              <div className="text">
-                {text}
+        <div>
+          <div className="col offset-m2 offset-l2 l8 m8 s12">
+            <div className="paper">
+              <div className="lines">
+                <div className="text">
+                  {text}
+                </div>
               </div>
+              <div className="holes hole-top"></div>
+              <div className="holes hole-middle"></div>
+              <div className="holes hole-bottom"></div>
             </div>
-            <div className="holes hole-top"></div>
-            <div className="holes hole-middle"></div>
-            <div className="holes hole-bottom"></div>
           </div>
         </div>
       </div>

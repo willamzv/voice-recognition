@@ -50,8 +50,8 @@ class Home extends React.Component{
             </div>
           <br />
             <div id='about-row' className='row row-about'>
-
-              <div className="card col m3 l3">
+              <h5 className="center white-text">Created by:</h5>
+              <div className="card col m3 l3 s10">
                 <div className="card-image waves-effect waves-block waves-light">
                   <img src={`https://www.gravatar.com/avatar/${md5("ricardozv_28@hotmail.com")}`}/>
                 </div>
@@ -61,7 +61,7 @@ class Home extends React.Component{
                 </div>
               </div>
 
-              <div className=" second card col m3 l3">
+              <div className=" second card col m3 l3 s10">
 
                 <div className="card-image waves-effect waves-block waves-light">
                   <img src={`https://www.gravatar.com/avatar/${md5("amyrohman8@gmail.com")}`}/>
@@ -72,7 +72,7 @@ class Home extends React.Component{
                 </div>
               </div>
 
-              <div className=" third card col m3 l3">
+              <div className=" third card col m3 l3 s10">
                 <div className="card-image waves-effect waves-block waves-light">
                   <img src={`https://www.gravatar.com/avatar/${md5("paulcarrillo05@gmail.com")}`}/>
                 </div>

@@ -28,7 +28,7 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="animated zoomInUp row">
-        <div className="f-container">
+        <div className="f-container center col m4 offset-m4 s12 l4 offset-l4">
           <section id="f-content">
             <form onSubmit={this.handleSubmit}>
               <h1>Sign In</h1>

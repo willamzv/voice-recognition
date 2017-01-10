@@ -12,15 +12,6 @@ const AddContact = ({ dispatch }) => {
         artyom.newPrompt({
           question:"Do you want to add an email?",
           options:["Yes","No"],
-          beforePrompt:function(){
-            console.log("Before ask");
-          },
-          onStartPrompt:function(){
-            console.log("The prompt is being executed");
-          },
-          onEndPrompt:function(){
-            console.log("The prompt has been executed succesfully");
-          },
           onMatch:function(i){ // i returns the index of the given options
             var action;
               if(i == 0){

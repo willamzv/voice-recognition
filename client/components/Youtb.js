@@ -55,7 +55,7 @@ class Youtb extends React.Component{
 
     const opts = {
       height: '500',
-      width: '800',
+      width: '85%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 1
       }

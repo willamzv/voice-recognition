@@ -147,7 +147,7 @@ h2,p{
 }
 
 /*forms*/
-.f-container { margin: 100px auto; position: relative; width: 900px; }
+.f-container { margin: 100px auto; position: relative; }
 #f-content {
 	background: #f9f9f9;
 	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
@@ -162,12 +162,12 @@ h2,p{
 	-o-box-shadow: 0 1px 0 #fff inset;
 	box-shadow: 0 1px 0 #fff inset;
 	border: 1px solid #c4c6ca;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	padding: 25px 0 0;
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
-	width: 400px;
+	width: 380px;
   height: 400px;
 }
 #f-content h1 {
@@ -292,9 +292,9 @@ div .card:hover {
 /*dictation*/
 
 .paper {
-  position: absolute;
+  position: relative;
   height: 600px;
-  width: 600px;
+  width: 100%;
   background: rgba(255,255,255,0.9);
   margin:auto;
   box-shadow: 0px 0px 5px 0px #888;
@@ -306,19 +306,22 @@ div .card:hover {
   height: 100%;
   width: 2px;
   background: rgba(255,0,0,0.4);
+  z-index: 1;
 }
 .lines {
+  position: absolute;
   margin-top: 40px;
   height: calc(100% - 40px);
   width: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
 }
 .text {
-  position: absolute;
-  top: 65px;
+  position: relative;
+  width: 90%;
+  top: 48px;
   left: 55px;
   bottom: 10px;
-  right: 10px;
+  right: 25px;
   line-height: 25px;
   font-family: 'Bowlby One', cursive !important;
   overflow: hidden;
@@ -396,7 +399,7 @@ div.on-error {
 }
 
 #about-row .card {
-  margin: 0 30px;
+  margin: 10px 30px;
 }
 
 

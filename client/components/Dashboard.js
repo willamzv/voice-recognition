@@ -28,7 +28,7 @@ const Dashboard = ({ user }) => (
     <div className="col l9 m9 s12">
       <div className="white-text animated flipInX">
         <Clock />
-        <h1 className="center">Welcome,&nbsp;<span>{user.fullname}</span></h1>
+        <h1 className="dashwelcome center">Welcome <span>{user.fullname}</span></h1>
       </div>
       <div className="animated flipInX">
         <Weather />

@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { logout } from '../actions/auth';
 import Flash from '../components/Flash';
 import { refreshLogin } from '../actions/auth';
+import MicOn from 'react-icons/lib/fa/microphone'
+import MicOff from 'react-icons/lib/fa/microphone-slash';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class App extends React.Component {
     this.navs = this.navs.bind(this);
     this.logout = this.logout.bind(this);
     this.sayTime = this.sayTime.bind(this);
+    this.microphoneOn = this.microphoneOn.bind(this);
   }
 
   componentDidMount() {
@@ -59,6 +62,13 @@ class App extends React.Component {
     artyom.say("It is" + this.props.time.t1 + this.props.time.amPm)
   }
 
+
+  microphoneOn(){if(artyom.isRecognizing())
+     return (<MicOn style={{'color':'red'}}/>)
+    else
+     return (<MicOff />)
+  }
+
   render() {
     let commands = {
       indexes:["go to notes","go to contacts","go to dashboard","go to youtube","logout","what time is it","time","go to Dictation"],
@@ -85,12 +95,17 @@ class App extends React.Component {
           }
         }
     };
+
+
     artyom.addCommands(commands)
     return (
       <div>
-        <nav className="transparent">
+        <nav className="black">
           <div className="nav-wrapper">
-            <Link to="/" className="brand-logo">Nova</Link>
+            <Link to="/" className="brand-logo"><img src="images/Nova_logo.png" /></Link>
+            <span style={{'paddingLeft': '700px'}}>
+              {this.microphoneOn()}
+            </span>
             <a href="#" data-activates="mobile" className="button-collapse">
               <i className="material-icons">menu</i>
             </a>

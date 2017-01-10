@@ -17,13 +17,13 @@ class Youtb extends React.Component{
         lang:"en-US",// A lot of languages are supported. Read the docs !
         continuous:true,// Artyom will listen forever
         listen:true, // Start recognizing
-        debug:true, // Show everything in the console
+        debug:false, // Show everything in the console
         speed:1, // talk normally
         soundex:true,
         executionKeyword: 'now',
         obeyKeyword: "Nova",
       });
-    },2000);
+    },1000);
   }
 
   videoSearch(words){
@@ -33,7 +33,6 @@ class Youtb extends React.Component{
       type: 'GET',
       dataType: 'JSON'
     }).done( videos => {
-      console.log(videos.items[1].snippet.thumbnails.medium)
       this.setState({
         videoId: videos.items[0].id.videoId,
         title:videos.items[0].snippet.title,

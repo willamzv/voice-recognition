@@ -53,7 +53,7 @@ class Weather extends React.Component {
       <div className="back-temp">
         <div className="location">{this.state.location}</div>
         <div className="weather">{this.state.wx}</div>
-        <div className="humidity">Humidity&nbsp;{this.state.humidity}%</div>
+        <div className="humidity">Humidity {this.state.humidity} %</div>
         <div className="temp">{fa}&deg; F</div>
       </div>
     )

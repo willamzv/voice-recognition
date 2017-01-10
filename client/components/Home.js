@@ -9,6 +9,23 @@ class Home extends React.Component{
     super(props);
     this.homepage = this.homepage.bind(this)
   }
+
+  componentDidMount(){
+    artyom.fatality();
+    setTimeout(()=>{
+      artyom.initialize({
+        lang:"en-US",// A lot of languages are supported. Read the docs !
+        continuous:true,// Artyom will listen forever
+        listen:true, // Start recognizing
+        debug:true, // Show everything in the console
+        speed:1, // talk normally
+        soundex:true,
+        executionKeyword: 'now',
+        obeyKeyword: "Nova",
+      });
+    },1000);
+  }
+
   homepage(){
     switch(this.props.user.role) {
       case 'user':
@@ -65,20 +82,23 @@ class Home extends React.Component{
                 </div>
               </div>
             </div>
+            <br />
           </div>
-      )
+        )
     default:
       return (
-        <div>
-          <div className="animated fadeInLeftBig">
-            <h1 className="white-text">Welcome to Nova</h1>
+        <div className="row">
+          <div className="col s12 m12 l12">
+            <div className="animated fadeInLeftBig">
+              <h1 className="white-text">Welcome to Nova</h1>
+            </div>
+            <div>
+              <h3 className="animated fadeInRight white-text">Nova is your personal assistant</h3>
+              <h4 className="animated fadeInUp white-text" >A web application with the ability to understand voice commands</h4>
+            </div>
+            <br/>
+            <Link to="/signin"><button className="animated zoomIn btn blue white-text">START</button></Link>
           </div>
-          <div>
-            <h3 className="animated fadeInRight white-text">Nova is your personal assistant</h3>
-            <h4 className="animated fadeInUp white-text" >A web application with the ability to understand voice commands!</h4>
-          </div>
-          <br/>
-          <Link to="/signin"><button className="animated zoomIn btn blue white-text">START</button></Link>
         </div>
       )
   }
@@ -86,7 +106,7 @@ class Home extends React.Component{
 
   render(){
     return(
-      <div>
+      <div id="hwelcome">
         {this.homepage()}
       </div>
     )

@@ -44,7 +44,7 @@ class Dictation extends React.Component{
         <input type='button' className="btn col m6 s6" onClick={() => this.UserDictation.start()} value="Start"/>
         <input type='button' className="btn red col m6 s6" onClick={() => this.UserDictation.stop()} value="Stop"/>
         <br/>
-        <p className="alert-error">Note: Please make sure you Stop Nova before you go to a different component</p>
+        <p>Note: Please make sure you Stop Nova before you go to a different component</p>
       </div>
       <div className="bgstick animated bounceInDown col m9 s12">
         <div className="col offset-m3 m6 s12">

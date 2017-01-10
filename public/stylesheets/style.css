@@ -21,8 +21,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-image: url("../images/backnova.jpg");
+  background-image: url("../images/eye.jpg");
   background-size: cover;
   font-family: 'Dosis', sans-serif;
 }
@@ -347,11 +346,6 @@ div .card:hover {
 }
 .hole-bottom {
   bottom: 10%;
-
-.tube {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .dashwelcome {
@@ -366,4 +360,28 @@ div .card:hover {
 .temp {
   font-size: 75px;
   font-weight: 300;
+}
+
+.quote {
+  font-size: 25px;
+}
+
+.info {
+  font-size: 17px;
+}
+
+div.on-error {
+  font-size: 23px;
+  height: 100vh;
+  color: white !important;
+  background-image: url("../images/space.png");
+  background-size: cover;
+}
+
+.lost {
+  font-size: 350px;
+}
+
+#about-row .card {
+  margin: 0 30px;
 }

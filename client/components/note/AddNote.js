@@ -17,7 +17,7 @@ const AddNote = ({ dispatch }) => {
     <div className="col m10 offset-m1">
       <input ref={ n => { note = n }} required={true} placeholder="Type your note here"/>
       <button
-        className="btn-floating btn-large purple"
+        className="btn-floating btn-large blue"
         onClick={ () => {
           dispatch(addNote(note.value));
           artyom.say(note.value);

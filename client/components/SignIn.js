@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { refreshLogin } from '../actions/auth';
 import { Link } from 'react-router';
+import { setFlash } from '../actions/flash'
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class SignIn extends React.Component {
       this.props.dispatch(refreshLogin(user));
       this.props.router.push("/dashboard")
     }).fail( err => {
+      this.props.dispatch(setFlash("Email or Password invalid", "error"))
     });
   }
 

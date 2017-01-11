@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { refreshLogin } from '../actions/auth';
+import { setFlash } from '../actions/flash'
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class SignUp extends React.Component {
       this.props.dispatch(refreshLogin(user));
       this.props.router.push('/dashboard');
     }).fail( err => {
-      //A great place to dispatch flash actions
+      this.props.dispatch(setFlash("Something went wrong! Try Again", "error"))
     });
   }
 

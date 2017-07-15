@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setScript } from '../actions/actions.js'
+import { setScript } from '../actions/actions.js';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 
 class Dictation extends React.Component{
@@ -17,7 +19,7 @@ class Dictation extends React.Component{
   }
 
   UserDictation = artyom.newDictation({
-    continuous:true, // Enable continuous if HTTPS connection
+    continuous: true, // Enable continuous if HTTPS connection
     onResult:(text)=> {
         this.toText(text);
     },

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import md5 from 'js-md5';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 
 class Home extends React.Component{

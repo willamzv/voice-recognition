@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addContact } from '../../actions/actions.js';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 
 

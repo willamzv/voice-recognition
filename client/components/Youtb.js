@@ -1,6 +1,8 @@
-import React from 'react'
-import YouTube from 'react-youtube'
-import $ from 'jquery'
+import React from 'react';
+import YouTube from 'react-youtube';
+import $ from 'jquery';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 
 class Youtb extends React.Component{

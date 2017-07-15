@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();;
 
 class Weather extends React.Component {
   constructor(props) {

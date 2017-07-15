@@ -3,6 +3,8 @@ import AddContact from './AddContact';
 import ContactList from './ContactList';
 import { connect } from 'react-redux';
 import { fetchContacts } from '../../actions/actions.js';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 
 class ContactApp extends React.Component {

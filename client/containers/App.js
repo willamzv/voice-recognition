@@ -6,6 +6,8 @@ import Flash from '../components/Flash';
 import { refreshLogin } from '../actions/auth';
 import MicOn from 'react-icons/lib/fa/microphone'
 import MicOff from 'react-icons/lib/fa/microphone-slash';
+import * as Artyom from 'artyom.js';
+const artyom = Artyom.ArtyomBuilder.getInstance();
 
 class App extends React.Component {
   constructor(props) {

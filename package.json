@@ -12,6 +12,7 @@
     "node": "6.11.1"
   },
   "dependencies": {
+    "artyom.js": "^1.0.5",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "babel-preset-latest": "^6.16.0",

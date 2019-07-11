@@ -37,7 +37,7 @@
     "gulp-watch": "^4.3.5",
     "html-webpack-plugin": "^2.22.0",
     "jade": "~1.11.0",
-    "jquery": "^2.2.0",
+    "jquery": "^3.4.0",
     "js-md5": "^0.4.1",
     "less-loader": "^2.2.3",
     "md5-js": "^0.0.3",
